@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='style.frontpage.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://fonts.googleapis.com/css?family=Raleway|Bree+Serif', rel='stylesheet', type='text/css')
+    body
+        header
+            h1 Ég er #{name}
+            h2.subheader #{subheader}
+        .main
+            h3 Sunna Halldórsdóttir
+            .highestsection
+                //img.bjarnamynd(scr= "https://www.facebook.com/images/spacer.gif", alt='Mynd af mér')
+                .highestsection-right
+                p Frá árinu 2020 hef ég smíðað vefi, tekið myndir og skrifað greinar.The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs.
+            h3.heading-three Umsagnir
+            .middle-section
+                .middle-section-left
+                    p.umsogn Sunna er mikið eðalmenni og vinnur öll sín verkefni hratt, örugglega og af mikilli nákvæmni“
+                    p.names Gunnhildur Guðmundsdóttir, Máfavinafjélaginu
+                .middle-section-right
+                    p.umsogn „Þegar kemur að því að vinna verkefni eru fáir betri en Sunna. 10/10 stjörnum.“
+                    p.names  — Jón Björnsson, Sandferðir ehf.
+            h3 Verkefni
+            .bottom-section
+                .fuglar
+                    h4 Máfavinafjélagið
+                    p.description Ég er einn af stofnfélögum í hinu íslenzka máfavinafjélagi.
+                .sandur
+                    h4 Sandferðir Ehf
+                    p.description Eina eyðimerkur ferðaskrifstofa Íslands.
+        .linkar
+            a.heim(href='#') Dæmi
+            a.valmynd(href='mafavinafelag.html') Veit ekki
+            a.valmynd2(href='#') Vefsíða
+
+
+
