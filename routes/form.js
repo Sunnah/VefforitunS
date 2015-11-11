@@ -23,6 +23,13 @@ router.post('/', function(req, res) {
 	renderData.errors=villumelding(req.body);
 	if(renderData.errors.length!==0)
 		renderData=putIn(renderData,req.body);
+				console.log('bla')
+				console.log('1 '+renderData.background)
+		if(renderData.background === ''){
+				console.log('2 '+renderData.background)
+			renderData.background = 'http://i.imgur.com/ZXDrw5D.gif'
+				console.log('3 '+renderData.background)
+		}
   	res.render('sida', renderData);
 });
 
