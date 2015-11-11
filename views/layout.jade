@@ -1,9 +1,21 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='dist/stylesheets/styles.css')
-  body
-    block content
-    
-  script(src="/javascripts/frontend.js")
+	head
+		title=title
+		link(rel='stylesheet', href='dist/stylesheets/styles.css')
+	body
+		nav
+			ul
+				li.verkefnilink
+					a(href='/') Heim
+				li.heimlink
+					a(href='/register') Nýskrá
+				li.heimlink
+					a(href='/sida') Dæmi um síðu
+				li.heimlink
+					a(href='/sida') Mínar síður
+				li.heimlink
+					a(href='/form') Ný síða
+	main
+		block content
+script(src="/javascripts/frontend.js")

@@ -17,6 +17,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var form = require('./routes/form');
 var sida = require('./routes/sida');
+var register = require('./routes/register');
 // initialize express
 var app = express();
 
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/form', form);
 app.use('/sida', sida);
+app.use('/register', register);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
