@@ -3,10 +3,11 @@ extends layout
 block content
 
 	h1 Eyðublað
-		form(method="post")
-			input(type="text", placeholder="Nafn" name="name" class="name")
-			input(type="text", placeholder="Bakgrunnsmynd" name="background" class="background")
-			input(type="text", placeholder="Undirfyrirsögn" name="subheader" clas="subheader")
-			input(type="text", placeholder="Mynd af þér" name="pf" class="pf")
-			input(type="text", placeholder="Texti" name="description" class="description")
-			input(type="submit" class="takki" )
+		.wrapper
+			form(method="post")
+				input(type="text", placeholder="Nafn" name="name" class="name")
+				input(type="text", placeholder="Bakgrunnsmynd" name="background" class="background")
+				input(type="text", placeholder="Undirfyrirsögn" name="subheader" clas="subheader")
+				input(type="text", placeholder="Mynd af þér" name="pf" class="pf")
+				input(type="text", placeholder="Texti" name="description" class="description")
+				input(type="submit" class="takki" )

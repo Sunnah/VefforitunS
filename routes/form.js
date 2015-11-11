@@ -51,12 +51,8 @@ function villumelding(data){
 		errors.push('You must enter your name');
 	if(!validate.isEmail(data.email))
 		errors.push('The email is not valid');
-	if(!validate.address(data.adresse))
-		errors.push('The adress is not valid');
 	if(!validate.required(data.val))
 		errors.push('You must select how you live');
-	if(!validate.phonenumber(data.pn))
-		errors.push('The phone number is not valid');
 	return errors;
 }
 
