@@ -1,10 +1,6 @@
 extends layout
 
 block content
-		meta(name='viewport', content='width=device-width, initial-cale=1')
-		meta(charset='UTF-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		link(href='https://fonts.googleapis.com/css?family=Raleway|Bree+Serif', rel='stylesheet', type='text/css')
 		body
 			main.top-content(style='background-image: url(#{background})')
 				header
@@ -16,7 +12,7 @@ block content
 					h3 #{name} 
 					.flexbox
 						.flex
-							img.bjarnamynd(src=pf, alt='Mynd af mér, samt ekki')
+							img.profilepic(src=pf, alt='Mynd af mér, samt ekki')
 						.flex
 							p #{description}
 				section.review-section

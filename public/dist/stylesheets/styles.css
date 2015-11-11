@@ -65,8 +65,7 @@ h2 {
   border-bottom: 5px solid #f1f1f1; }
 
 .wrapper {
-  margin-left: 23%;
-  margin-right: 5%; }
+  margin-left: 15%; }
 
 /* SECTION */
 .flexbox {
@@ -104,6 +103,9 @@ h2 {
   margin: 1%;
   padding-bottom: 44%;
   margin-bottom: 7.5%; }
+
+.profilepic {
+  width: 90%; }
 
 .half2 {
   width: 46%;
@@ -182,8 +184,6 @@ nav a:hover {
     text-transform: uppercase;
     font-size: 55px;
     margin: 0 5% 0 0; }
-  .wrapper {
-    margin: 0 2% 0; }
   .half2 {
     background-size: cover;
     width: 100%;
@@ -212,7 +212,5 @@ nav a:hover {
     text-align: center;
     padding-top: 70px;
     padding-bottom: 70px; }
-  .wrapper {
-    margin: 0 2%; }
   h4 {
     font-size: 30px; } }

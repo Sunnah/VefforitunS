@@ -1,10 +1,15 @@
 extends layout
 
 block content
-
-	h1 Eyðublað
+		body
+			main.top-content
+				header
+					h1 Eyðublað
 		.wrapper
 			form(method="post")
+				label(for='sitename') Nafn:	
+				input#sitename(type="text", placeholder="Nafn Síðu" name="sitename" class="sitename")
+				input(type="text", placeholder="Notendanafn" name="username" class="username")
 				input(type="text", placeholder="Nafn" name="name" class="name")
 				input(type="text", placeholder="Bakgrunnsmynd" name="background" class="background")
 				input(type="text", placeholder="Undirfyrirsögn" name="subheader" clas="subheader")
