@@ -2,21 +2,14 @@ extends layout
 
 block content
 
-  h1 Eyðublað
-  form(method="post")
-    input(type="text", placeholder="Nafn" name="name" class="name")
-    input(type="text", placeholder="Mynd af þér" name="pf" class="pf")
-    input(type="text", placeholder="Undirfyrirsögn" name="subheader" class="subheader")
-    input(type="text", placeholder="Umsögn um þig" name="Review1" class="Review")
-    input(type="text", placeholder="Umsögn um þig" name="Review2" class="Review")
-    input(type="text", placeholder="Netfang" name="email" class="email")
-    input(type="text", placeholder="Stutt lýsing á þér" name="description" class="description")
-    input(type="text", placeholder="Heimilisfang" name="adresse" class="adresse" ) 
-    input(type="text", placeholder="Símanúmer" name="pn" class="pn")
-    input(type="text", placeholder="Áhugamál" name="hobbie1" class="hobbie1")
-    input(type="text", placeholder="Nánari lýsing á áhugamáli" name="hobbieD1" class="hobbieD1")
-    input(type="text", placeholder="Mynd tengd áhugamáli" name="hobbieP1" class="hobbieP1")
-    input(type="text", placeholder="Áhugamál" name="hobbie2" class="hobbie2")
-    input(type="text", placeholder="Nánari lýsing á áhugamáli" name="hobbieD2" class="hobbieD2")
-    input(type="text", placeholder="Mynd tengd áhugamáli" name="hobbieP2" class="hobbieP2")
-    input(type="submit" class="takki" )
+	h1 Eyðublað
+		form(method="post")
+			input(type="text", placeholder="Nafn" name="name" class="name")
+			input(type="text", placeholder="Bakgrunnsmynd" name="background" class="background")
+			input(type="text", placeholder="Undirfyrirsögn" name="subheader" clas="subheader")
+			input(type="text", placeholder="Mynd af þér" name="pf" class="pf")
+			input(type="text", placeholder="Texti" name="description" class="description")
+			input(type="text", placeholder="Heimilisfang" name="adresse" class="adresse" ) 
+			input(type="text", placeholder="Netfang" name="email" class="email")
+			input(type="text", placeholder="Símanúmer" name="pn" class="pn")
+			input(type="submit" class="takki" )
