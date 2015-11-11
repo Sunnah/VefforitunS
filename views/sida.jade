@@ -1,41 +1,51 @@
 extends layout
 
 block content
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(href='https://fonts.googleapis.com/css?family=Raleway|Bree+Serif', rel='stylesheet', type='text/css')
-    body
-        header
-            h1 Ég er #{name}
-            h2.subheader #{subheader}
-        .main
-            h3 Sunna Halldórsdóttir
-            .highestsection
-                img.bjarnamynd(src=pf, alt='Mynd af mér, samt ekki')
-
-                .highestsection-right
-                p Frá árinu 2020 hef ég smíðað vefi, tekið myndir og skrifað greinar.The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs.
-            h3.heading-three Umsagnir
-            .middle-section
-                .middle-section-left
-                    p.umsogn Sunna er mikið eðalmenni og vinnur öll sín verkefni hratt, örugglega og af mikilli nákvæmni“
-                    p.names Gunnhildur Guðmundsdóttir, Máfavinafjélaginu
-                .middle-section-right
-                    p.umsogn „Þegar kemur að því að vinna verkefni eru fáir betri en Sunna. 10/10 stjörnum.“
-                    p.names  — Jón Björnsson, Sandferðir ehf.
-            h3 Verkefni
-            .bottom-section
-                .fuglar
-                    h4 Máfavinafjélagið
-                    p.description Ég er einn af stofnfélögum í hinu íslenzka máfavinafjélagi.
-                .sandur
-                    h4 Sandferðir Ehf
-                    p.description Eina eyðimerkur ferðaskrifstofa Íslands.
-        .linkar
-            a.heim(href='#') Dæmi
-            a.valmynd(href='mafavinafelag.html') Veit ekki
-            a.valmynd2(href='#') Vefsíða
-
-
-
+		meta(name='viewport', content='width=device-width, initial-cale=1')
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(href='https://fonts.googleapis.com/css?family=Raleway|Bree+Serif', rel='stylesheet', type='text/css')
+		body
+			main.top-content
+				header
+					h1 Ég er #{name}
+					h2.subheader #{subheader}
+		.wrapper
+			.bottom-content
+				.bear-section
+					h3 #{name} 
+					.flexbox
+						.flex
+							img.bjarnamynd(src=pf, alt='Mynd af mér, samt ekki')
+						.flex
+							p #{description}
+				section.review-section
+					h3 Áhugamál 
+					.flexbox
+						.flex
+							p.comment #{hobbie1} 
+							p.review - Placeholder 
+						.flex
+							p.comment „Þegar kemur að því að feeda hitt liðið eru fáir betri en drino. 10/10 stjörnum.“
+							p.review ― Ívar "Kaztro" Húni, CS:GO fagmaður.
+				.halfs
+					h3.verkefni Verkefni
+						.half1
+							.mavadiv
+								h4 Mávavinafjélagið
+								p.mafar-text
+									Ég er einn af stofnfélögum í hinu íslenzka máfavinafjélagi.
+						.half2
+							h4 Sandferðir Ehf.
+							p.sand-text
+								Eina eyðimerkur ferðaskrifstofa Íslands.
+		nav
+				ul
+					li.verkefnilink
+						a(href='#') Heim 
+					li.heimlink
+						a(href='#') Verkefni 
+					li.heimlink
+						a(href='#') Um Mig
+					
+			
