@@ -28,7 +28,7 @@ body {
 
 header {
   font-family: 'Bree serif';
-  background: url(bg.jpg);
+  background: url(http://previews.123rf.com/images/emielcia/emielcia1001/emielcia100100083/6241613-2-Big-heart-made-of-red-and-white-flowers-Stock-Photo-hearts.jpg);
   background-position: center;
   height: 600px;
   background-size: cover;
@@ -159,7 +159,7 @@ h4 {
   margin-left: 5%; }
 
 .fuglar {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(mafar.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(http://previews.123rf.com/images/emielcia/emielcia1001/emielcia100100083/6241613-2-Big-heart-made-of-red-and-white-flowers-Stock-Photo-hearts.jpg);
   background-position: center;
   background-size: cover;
   width: 48%;
@@ -191,7 +191,7 @@ h4 {
 
 .sandur {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(sandur.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(http://previews.123rf.com/images/emielcia/emielcia1001/emielcia100100083/6241613-2-Big-heart-made-of-red-and-white-flowers-Stock-Photo-hearts.jpg);
   background-position: center;
   background-size: cover;
   width: 48%;

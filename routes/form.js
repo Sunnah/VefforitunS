@@ -12,12 +12,11 @@ router.get('/', function(req, res) {
 router.post('/', function(req, res) {
 	var renderData={
 		name:'',
-		email:'',
+		pf:'',
+		subheader:'',
 		adresse:'',
-		pn:'',
 		val:'',
 		subheader:''
-		//profile:''
 	};
 	renderData.errors=villumelding(req.body);
 	if(renderData.errors.length!==0)
@@ -27,12 +26,11 @@ router.post('/', function(req, res) {
 
 function putIn(renderData, data){
 	renderData.name=data.name;
-	renderData.email=data.email;
+	renderData.pf=data.pf;
+	renderData.subheader=data.subheader;
 	renderData.adresse=data.adresse;
 	renderData.pn=data.pn;
-	renderData.val=data.val;
 	renderData.subheader=data.subheader;
-	//renderData.profile=data.profile;
 	return renderData;
 }
 
