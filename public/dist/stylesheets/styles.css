@@ -65,7 +65,19 @@ h2 {
   border-bottom: 5px solid #f1f1f1; }
 
 .wrapper {
+  margin-top: 5%;
   margin-left: 15%; }
+
+/* FORM CONTROLL */
+input[type="text"] {
+  width: 70.8%; }
+
+textarea[type="text"] {
+  width: 70.8%;
+  resize: none; }
+
+input[type="submit"] {
+  margin-top: 30px; }
 
 /* SECTION */
 .flexbox {
@@ -118,26 +130,8 @@ h2 {
   margin-bottom: 7.5%; }
 
 /* NAVIGATOR */
-nav {
-  width: 150px;
-  background-color: rgba(0, 0, 0, 0.8);
-  top: 0px;
-  bottom: 0%;
-  position: fixed; }
-
 ul {
   list-style-type: none; }
-
-nav a {
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  margin: 0 0 0 -15%; }
-
-nav a:hover {
-  border-bottom: 3px solid #f1f1f1; }
 
 .home {
   border-bottom: 3px solid #f1f1f1; }
@@ -192,25 +186,12 @@ nav a:hover {
     background-size: cover;
     width: 100%;
     margin: 1% 0%;
-    padding-bottom: 97%; }
-  nav {
-    width: 100%;
-    float: left;
-    height: 270px;
-    position: static;
-    text-align: center; } }
+    padding-bottom: 97%; } }
 
 @media only screen and (max-width: 767px) {
   header {
     word-break: break-all; }
   .socials {
     margin: 0% 9%; }
-  nav {
-    width: 100%;
-    float: left;
-    position: static;
-    text-align: center;
-    padding-top: 70px;
-    padding-bottom: 70px; }
   h4 {
     font-size: 30px; } }
