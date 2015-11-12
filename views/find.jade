@@ -6,7 +6,10 @@ block content
 				header
 					h1 Eyðublað
 		.wrapper
-			form(method="post")
-				label(for='sitename') Nafns síðu:	
-				input#sitename(type="text", placeholder="Nafn Síðu" name="sitename" class="sitename")
-				input(type="submit" class="takki" )
+				if entries
+					ul
+						each u in entries
+					li 
+						h1 #{u.username}
+						h2 #{text}
+						p #{u.date}

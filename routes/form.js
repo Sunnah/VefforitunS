@@ -3,6 +3,7 @@
 var express = require('express');
 var router = express.Router();
 var validate=require('../lib/validate');
+var site = require('../lib/sites');
 /* GET /form */
 router.get('/', function(req, res) {
   res.render('form', { errors:[] });
@@ -11,37 +12,42 @@ router.get('/', function(req, res) {
 /* POST /form */
 router.post('/', function(req, res) {
 	var renderData={
-		name:'',
-		background:'',
-		subheader:'',
-		pf:'',
-		description: '',
-		adresse:'',
-		email:'',
-		pn:''
-	};
-	renderData.errors=villumelding(req.body);
-	if(renderData.errors.length!==0)
-		renderData=putIn(renderData,req.body);
-				console.log('bla')
-				console.log('1 '+renderData.background)
-		if(renderData.background === ''){
-				console.log('2 '+renderData.background)
-			renderData.background = 'http://i.imgur.com/ZXDrw5D.gif'
-				console.log('3 '+renderData.background)
-		}
-  	res.render('sida', renderData);
+	sitename:'',
+	username:'',
+	name:'',
+	background:'',
+	subheader:'',
+	pf:'',
+	description:''};
+	putIn(renderData,req.body);
+	if(renderData.background === ''){
+		renderData.background = 'http://i.imgur.com/ZXDrw5D.gif'
+	}
+	site.createSite(renderData.username, renderData.name, renderData.background, renderData.subheader, renderData.purl, renderData.description, renderData.sitename, function (err, status) {
+    if (err) {
+      console.error(err);
+    }
+
+    var success = true;
+
+    if (err || !status) {
+      success = false;
+    }
+
+    res.render('create', { title: 'Create site', post: true, success: success })
+  });
+	res.render('sida', renderData );
 });
 
+
 function putIn(renderData, data){
-	renderData.name=data.name;
-	renderData.background=data.background;
-	renderData.subheader=data.subheader;
-	renderData.pf=data.pf;
-	renderData.description=data.description;
-	renderData.adresse=data.adresse;
-	renderData.email=data.email;
-	renderData.pn=data.pn;
+	renderData.sitename=data.sitename,
+	renderData.username=data.username,
+	renderData.name=data.name,
+	renderData.background=data.background,
+	renderData.subheader=data.subheader,
+	renderData.pf=data.pf,
+	renderData.description=data.description
 	return renderData;
 }
 
