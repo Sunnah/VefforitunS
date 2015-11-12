@@ -15,6 +15,7 @@ var bodyParser = require('body-parser');
 
 // Make reference to the route-handler scripts we use.
 var routes = require('./routes/index');
+var find = require('./routes/find');
 var form = require('./routes/form');
 var sida = require('./routes/sida');
 var register = require('./routes/register');
@@ -41,6 +42,7 @@ app.use('/', routes);
 app.use('/form', form);
 app.use('/sida', sida);
 app.use('/register', register);
+app.use('/find', find);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
