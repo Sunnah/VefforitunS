@@ -12,32 +12,31 @@ router.get('/', function(req, res) {
 router.post('/', function(req, res) {
 	var renderData={
 		name:'',
-		background:'',
-		subheader:'',
 		pf:'',
-		description: '',
+		subheader:'',
 		adresse:'',
-		email:'',
-		pn:''
+		val:'',
+		subheader:'',
+		description: '',
+		hobbie1:''
 	};
 	renderData.errors=villumelding(req.body);
 	if(renderData.errors.length!==0)
 		renderData=putIn(renderData,req.body);
-		if(renderData.background === ''){
-			renderData.background = 'http://i.imgur.com/ZXDrw5D.gif'
-		}
   	res.render('sida', renderData);
 });
 
 function putIn(renderData, data){
 	renderData.name=data.name;
-	renderData.background=data.background;
-	renderData.subheader=data.subheader;
 	renderData.pf=data.pf;
+	renderData.subheader=data.subheader;
 	renderData.description=data.description;
+	renderData.hobbie1=data.hobbie1;
+	renderData.hobbie1=data.hobbie1;
+	renderData.hobbie1=data.hobbie1;
 	renderData.adresse=data.adresse;
-	renderData.email=data.email;
 	renderData.pn=data.pn;
+	renderData.subheader=data.subheader;
 	return renderData;
 }
 
@@ -47,8 +46,12 @@ function villumelding(data){
 		errors.push('You must enter your name');
 	if(!validate.isEmail(data.email))
 		errors.push('The email is not valid');
+	if(!validate.address(data.adresse))
+		errors.push('The adress is not valid');
 	if(!validate.required(data.val))
 		errors.push('You must select how you live');
+	if(!validate.phonenumber(data.pn))
+		errors.push('The phone number is not valid');
 	return errors;
 }
 
