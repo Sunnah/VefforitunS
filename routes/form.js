@@ -12,21 +12,6 @@ router.get('/', function(req, res) {
 /* POST /form */
 router.post('/', function(req, res) {
 	var renderData={
-<<<<<<< HEAD
-		name:'',
-		pf:'',
-		subheader:'',
-		adresse:'',
-		val:'',
-		subheader:'',
-		description: '',
-		hobbie1:''
-	};
-	renderData.errors=villumelding(req.body);
-	if(renderData.errors.length!==0)
-		renderData=putIn(renderData,req.body);
-  	res.render('sida', renderData);
-=======
 	sitename:'',
 	username:'',
 	name:'',
@@ -52,23 +37,10 @@ router.post('/', function(req, res) {
     res.render('create', { title: 'Create site', post: true, success: success })
   });
 	res.render('sida', renderData );
->>>>>>> 44b48ae5b669e341864fda482b12481a6818ab1b
 });
 
 
 function putIn(renderData, data){
-<<<<<<< HEAD
-	renderData.name=data.name;
-	renderData.pf=data.pf;
-	renderData.subheader=data.subheader;
-	renderData.description=data.description;
-	renderData.hobbie1=data.hobbie1;
-	renderData.hobbie1=data.hobbie1;
-	renderData.hobbie1=data.hobbie1;
-	renderData.adresse=data.adresse;
-	renderData.pn=data.pn;
-	renderData.subheader=data.subheader;
-=======
 	renderData.sitename=data.sitename,
 	renderData.username=data.username,
 	renderData.name=data.name,
@@ -76,7 +48,6 @@ function putIn(renderData, data){
 	renderData.subheader=data.subheader,
 	renderData.pf=data.pf,
 	renderData.description=data.description
->>>>>>> 44b48ae5b669e341864fda482b12481a6818ab1b
 	return renderData;
 }
 
